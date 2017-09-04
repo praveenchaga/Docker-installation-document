@@ -40,7 +40,7 @@ services:
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
-      - 9010:8080
+      - 9010:8900
     networks:
       - frontend
     stop_grace_period: 1m30s
