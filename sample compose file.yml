@@ -1,0 +1,11 @@
+nginx:
+  images: nginx
+  links:
+   -mysql:mysql
+  ports:
+   -8080:80
+     
+ mysql:
+  images:mysql
+  environment:
+   -MYSQL_ROOT_PASSWORD=welcome123
