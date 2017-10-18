@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+ nexcel:
+  image: nexcel
+  container_name: nexcel-container
+  ports:
+   - 801:801
+  network_mode: ec2user_default
+
+ bpstreem:
+  image: bpstreem
+  container_name: bpstreem-container
+  ports:
+   - 802:802
+  network_mode: ec2user_default
+
+ nginx:
+  image: mynginx
+  container_name: mynginx-container
+  build: .
+  ports:
+   - 80:80
+
